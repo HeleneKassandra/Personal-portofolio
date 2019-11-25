@@ -62,11 +62,25 @@ body{
   margin-right: 1rem;
 }
 
-#projects-section{
+#projects-section {
+  margin: 4rem auto 3rem auto;
+}
+#writing-section {
   margin: 4rem auto 3rem auto;
 }
 
-#projects-section article {
+#writing-section article{
+  display: grid;
+  grid-template-rows:  fit-content(20%) auto;
+  grid-row-gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+#writing-section h4{
+  margin-top: 0;
+}
+
+#projects-section article{
   display: grid;
   grid-template-rows:  fit-content(20%) auto;
   grid-row-gap: 1rem;
@@ -151,7 +165,6 @@ h4{
   font-size: 1rem;
 }
 
-
 .intro-text{
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
@@ -166,10 +179,26 @@ h4{
 .intro-text span{
     font-size: 0.6rem;
 }
+/* WRITING */
+.writing-container{
+  display: grid;
+  grid-template-rows: fit-content(30px) auto;
+  grid-row-gap: 1rem;
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
 
 @media only screen and (min-width: 600px) {
 
   #projects-section article {
+    display: grid;
+    grid-template-columns:  minmax(100px, 300px) auto;
+    grid-row-gap: 0;
+    grid-column-gap: 1rem;
+  }
+  #writing-section article {
     display: grid;
     grid-template-columns:  minmax(100px, 300px) auto;
     grid-row-gap: 0;
