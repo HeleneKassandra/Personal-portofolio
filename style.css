@@ -69,12 +69,8 @@ body{
   margin: 4rem auto 3rem auto;
 }
 
-#writing-section article{
-  display: grid;
-  grid-template-rows:  fit-content(20%) auto;
-  grid-row-gap: 1rem;
-  align-items: center;
-  margin-top: 2rem;
+#writing-section p{
+  margin-top:.5rem;
 }
 #writing-section h4{
   margin-top: 0;
@@ -125,7 +121,8 @@ footer h5{
 }
 /* TEXTS */
 
-a {
+a  {
+  fill: #3D4D65;
   color: #3D4D65;
 }
 a:hover{
@@ -193,12 +190,6 @@ h4{
 @media only screen and (min-width: 600px) {
 
   #projects-section article {
-    display: grid;
-    grid-template-columns:  minmax(100px, 300px) auto;
-    grid-row-gap: 0;
-    grid-column-gap: 1rem;
-  }
-  #writing-section article {
     display: grid;
     grid-template-columns:  minmax(100px, 300px) auto;
     grid-row-gap: 0;
