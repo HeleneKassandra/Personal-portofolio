@@ -9,6 +9,17 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-134235510-1');
+
+     function toggle(x, sectionId) {
+       var classes = document.querySelector(x).classList;
+        classes.toggle('expand--closed');
+       if(classes.contains('expand--closed')){
+          document.querySelector(sectionId + " > button span").innerHTML = 'more';
+       }
+       else{
+          document.querySelector(sectionId + " > button span").innerHTML = 'less';
+       }
+      }
     </script>
     <meta charset="utf-8">
     <meta name="description" content="Helene Kassandra is a Norwegian Front-end Developer and UX-Designer. She has a passion for web-development and UX-design, loves music and hates pineapple.">
@@ -28,7 +39,7 @@
       </div>
       <div class="intro-gradient-box">
         <p class="intro-text">
-          Hi! I'm a 25 year old tech geek/gamer from Norway who has a passion for web-development and UX-design. I love music and hate pineapples. <span>Seriously, I don't like pineapple</span>
+          Hi! I'm a 26 year old tech geek/gamer from Norway who has a passion for web-development and UX-design. I love music and hate pineapples. <span>Seriously, I don't like pineapple</span>
         </p>
       </div>
 
@@ -97,32 +108,48 @@
             </p>
           </div>
         </article>
-        <article>
-          <img src="./img/beaverimg.svg" alt="Drawing of a pink beaver in front of a light green circle">
-          <div>
-            <h5>Rock-Paper-Scissors</h5>
-            <strong class="location-text"><a href="https://helenekassandra.com/thedaemonarmy/RockPaperScissors/" target="_blank">See it live</a></strong>
-            <p>
-              A Rock-Paper-Scissors game made with PHP, Javascript, HTML & CSS. I made this game for the members of Alpha Revolver Gaming Community.
-              The idea was that they could play against the community mascot: Cleaver the Beaver. The Illustration is made by me in Affinity Designer.
-            </p>
-          </div>
-        </article>
-        <article>
-          <img src="./img/DailyGatherer.svg" alt="Circular picture with the text The Daily Gatherer Helper">
-          <div>
-            <h5>The Daily Gatherer Helper</h5>
-            <strong class="location-text"><a href="https://www.helenekassandra.com/thedaemonarmy/GW2DailyGathererHelper/" target="_blank">See it live</a></strong>
-            <p>
-              A website that shows users the best locations to finish their daily gathering quests in Guild Wars 2.
-              Created in HTML, CSS, Javascript (including JQuery and Knockout), with help of Materialize and the official Guild Wars 2 API.
-            </p>
-          </div>
-        </article>
+        <div id="projects_toggle-content" class="expand--closed">
+          <article>
+                  <img src="./img/beaverimg.svg" alt="Drawing of a pink beaver in front of a light green circle">
+                  <div>
+                    <h5>Rock-Paper-Scissors</h5>
+                    <strong class="location-text"><a href="https://helenekassandra.com/thedaemonarmy/RockPaperScissors/" target="_blank">See it live</a></strong>
+                    <p>
+                      A Rock-Paper-Scissors game made with PHP, Javascript, HTML & CSS. I made this game for the members of Alpha Revolver Gaming Community.
+                      The idea was that they could play against the community mascot: Cleaver the Beaver. The Illustration is made by me in Affinity Designer.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <img src="./img/DailyGatherer.svg" alt="Circular picture with the text The Daily Gatherer Helper">
+                  <div>
+                    <h5>The Daily Gatherer Helper</h5>
+                    <strong class="location-text"><a href="https://www.helenekassandra.com/thedaemonarmy/GW2DailyGathererHelper/" target="_blank">See it live</a></strong>
+                    <p>
+                      A website that shows users the best locations to finish their daily gathering quests in Guild Wars 2.
+                      Created in HTML, CSS, Javascript (including JQuery and Knockout), with help of Materialize and the official Guild Wars 2 API.
+                    </p>
+                  </div>
+                </article>
+        </div>
+      
+        <button class="show_more-btn" onClick="toggle('#projects_toggle-content', '#projects-section')">Show <span>more</span></button>
       </section>
         <section class="content-section" id="writing-section">
               <h3>Writing</h3>
               <h4>Articles and other texts I've written</h4>
+              <article>
+                  <h5><a href="https://medium.com/sparebank1-digital/playwright-vs-cypress-1e127d9157bd" target="_blank">Playwright vs Cypress
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
+                    <path fill="currentColor"
+                      d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
+                    </path>
+                  </svg></a></h5>
+                  <p>
+                    This article compare the two frameworks, and hopefully make it clearer which testing framework suits your needs the most, by making you aware of their similarities, differences, strengths and weaknesses.
+                  </p>
+              </article>
               <article>
                   <h5><a href="https://developer.bring.com/blog/testing-with-cypress/" target="_blank">Testing with Cypress 
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img"
@@ -150,14 +177,17 @@
                   I faced while I rewriting an application.
                   </p>
               </article>
-              <article>
+              <div id="writing_toggle-content" class="expand--closed">
+                <article>
                   <h5><a href="writing/wcag-poem.html">WCAG Poem</a></h5>
                   <p>
-                    WCAG is a set of guidelines, required by law to make the web more accessible. 
+                    WCAG is a set of guidelines, required by law to make the web more accessible.
                     I decided to create a poem, summarizing
                     some of the guidelines, and why it is important to follow
                   </p>
-              </article>
+                </article>
+              </div>
+              <button class="show_more-btn" onClick="toggle('#writing_toggle-content', '#writing-section')">Show <span>more</span></button>
               </section>
       <footer>
         <div class="footer-content">
