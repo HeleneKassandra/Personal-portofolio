@@ -186,12 +186,13 @@ h4{
   text-align: center;
 }
 
+/* EXPAND */
 .expand--closed {
   display: none;
 }
 
 .show_more-btn{
-  padding: 1rem; 
+  padding: 1rem 2rem; 
   background: #3D4D65;
   color: #FFF;
   max-width:20rem;
@@ -200,6 +201,9 @@ h4{
 }
 .show_more-btn:hover {
   background: #0466a5;
+}
+.content-section > button {
+    justify-self: center;
 }
 @media only screen and (min-width: 600px) {
 

@@ -15,9 +15,11 @@
         classes.toggle('expand--closed');
        if(classes.contains('expand--closed')){
           document.querySelector(sectionId + " > button span").innerHTML = 'more';
+          document.querySelector(sectionId + " > button ").setAttribute("aria-expanded", false)
        }
        else{
           document.querySelector(sectionId + " > button span").innerHTML = 'less';
+          document.querySelector(sectionId + " > button ").setAttribute("aria-expanded", true)
        }
       }
     </script>
@@ -133,7 +135,7 @@
                 </article>
         </div>
       
-        <button class="show_more-btn" onClick="toggle('#projects_toggle-content', '#projects-section')">Show <span>more</span></button>
+        <button class="show_more-btn" onClick="toggle('#projects_toggle-content', '#projects-section')"  aria-expanded="false">Show <span>more</span></button>
       </section>
         <section class="content-section" id="writing-section">
               <h3>Writing</h3>
@@ -163,31 +165,31 @@
                     In this article I quickly go through the progress of getting started, writing and running your first tests, along with my personal opinion on why you should use Cypress.
                   </p>
               </article>
-              <article>
-                  <h5><a href="https://developer.bring.com/blog/avoid-wall-of-frustration/" target="_blank">How to avoid the wall of frustration
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
-                    <path fill="currentColor"
-                      d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
-                    </path>
-                  </svg></a></h5>
-                  <p>
-                  Regardless of how enthusiastic you are laying the first bricks of a project, at some point you’ll realise that the stack
-                  of bricks, look suspiciously like a wall, or something different than originally pictured. In this article I cover some of the stages and challenges
-                  I faced while I rewriting an application.
-                  </p>
-              </article>
               <div id="writing_toggle-content" class="expand--closed">
                 <article>
-                  <h5><a href="writing/wcag-poem.html">WCAG Poem</a></h5>
-                  <p>
-                    WCAG is a set of guidelines, required by law to make the web more accessible.
-                    I decided to create a poem, summarizing
-                    some of the guidelines, and why it is important to follow
-                  </p>
+                    <h5><a href="https://developer.bring.com/blog/avoid-wall-of-frustration/" target="_blank">How to avoid the wall of frustration
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20px">
+                      <path fill="currentColor"
+                        d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z">
+                      </path>
+                    </svg></a></h5>
+                    <p>
+                    Regardless of how enthusiastic you are laying the first bricks of a project, at some point you’ll realise that the stack
+                    of bricks, look suspiciously like a wall, or something different than originally pictured. In this article I cover some of the stages and challenges
+                    I faced while I rewriting an application.
+                    </p>
                 </article>
+                  <article>
+                    <h5><a href="writing/wcag-poem.html">WCAG Poem</a></h5>
+                    <p>
+                      WCAG is a set of guidelines, required by law to make the web more accessible.
+                      I decided to create a poem, summarizing
+                      some of the guidelines, and why it is important to follow
+                    </p>
+                  </article>
               </div>
-              <button class="show_more-btn" onClick="toggle('#writing_toggle-content', '#writing-section')">Show <span>more</span></button>
+                <button class="show_more-btn" onClick="toggle('#writing_toggle-content', '#writing-section')" aria-expanded="false">Show <span>more</span></button>
               </section>
       <footer>
         <div class="footer-content">
