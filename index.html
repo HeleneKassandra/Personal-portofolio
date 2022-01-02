@@ -86,7 +86,17 @@
         <h3>My Projects</h3>
         <h4>Things I've made outside of work</h4>
         <article>
-          <img src="./img/posten-dictionary.svg" alt="Circular picture with the text Posten Dictionary in the center">
+          <div>
+            <h5>The Daemon Army - Website </h5>
+            <strong class="location-text"><a href="https://helenekassandra.com/tda-website/" target="_blank">See it live</a></strong>
+            <p>
+              I created a website for the gaming community I used to lead. The site was created in React, using sanity.io to update and store all the content, which was then fetched through their API.
+              In addition to host a blog and basic information about the community, the site also fetch all the events from the calendar bot on Discord. Allowing admins to create events in Discord, and have it automatically
+              show on the website. The site also messaged the right channel on Discord, whenever a potential member would request a in-game invitation by filling in their username. 
+            </p>
+          </div>
+        </article>
+        <article>
           <div>
             <h5>Posten Dictionary </h5>
             <strong class="location-text"><a href="https://bring.github.io/posten-dictionary/" target="_blank">See it live</a></strong>
@@ -99,40 +109,37 @@
           </div>
         </article>
         <article>
-          <img src="./img/DailyGatherer.svg" alt="Circular picture with the text The Daily Gatherer Helper">
           <div>
             <h5>The Daily Helper - GW2 </h5>
-            <strong class="location-text"><a href="https://www.thedaemonarmy.com" target="_blank">See it live</a></strong>
+            <strong class="location-text"><a href="https://helenekassandra.com/gw2-daily-helper/" target="_blank">See it live</a></strong>
             <p>
                 My first ever React application, and a re-write of my "Daily gatherer helper" project.
-                The site help Guild Wars 2 players find the best locations to do their daily quests, and it's used by approximately 100 users every day.
+                The site help Guild Wars 2 players find the best locations to do their daily quests, and it's used by approximately 80 users every day.
                 Created in React, with the help of Guild Wars 2 Official API.
             </p>
           </div>
         </article>
         <div id="projects_toggle-content" class="expand--closed">
           <article>
-                  <img src="./img/beaverimg.svg" alt="Drawing of a pink beaver in front of a light green circle">
-                  <div>
-                    <h5>Rock-Paper-Scissors</h5>
-                    <strong class="location-text"><a href="https://helenekassandra.com/thedaemonarmy/RockPaperScissors/" target="_blank">See it live</a></strong>
-                    <p>
-                      A Rock-Paper-Scissors game made with PHP, Javascript, HTML & CSS. I made this game for the members of Alpha Revolver Gaming Community.
-                      The idea was that they could play against the community mascot: Cleaver the Beaver. The Illustration is made by me in Affinity Designer.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <img src="./img/DailyGatherer.svg" alt="Circular picture with the text The Daily Gatherer Helper">
-                  <div>
-                    <h5>The Daily Gatherer Helper</h5>
-                    <strong class="location-text"><a href="https://www.helenekassandra.com/thedaemonarmy/GW2DailyGathererHelper/" target="_blank">See it live</a></strong>
-                    <p>
-                      A website that shows users the best locations to finish their daily gathering quests in Guild Wars 2.
-                      Created in HTML, CSS, Javascript (including JQuery and Knockout), with help of Materialize and the official Guild Wars 2 API.
-                    </p>
-                  </div>
-                </article>
+            <div>
+              <h5>Rock-Paper-Scissors</h5>
+              <strong class="location-text"><a href="https://helenekassandra.com/thedaemonarmy/RockPaperScissors/" target="_blank">See it live</a></strong>
+              <p>
+                A Rock-Paper-Scissors game made with PHP, Javascript, HTML & CSS. I made this game for the members of Alpha Revolver Gaming Community.
+                The idea was that they could play against the community mascot: Cleaver the Beaver. The Illustration is made by me in Affinity Designer.
+              </p>
+            </div>
+          </article>
+          <article>
+            <div>
+              <h5>The Daily Gatherer Helper</h5>
+              <strong class="location-text"><a href="https://www.helenekassandra.com/thedaemonarmy/GW2DailyGathererHelper/" target="_blank">See it live</a></strong>
+              <p>
+                A website that shows users the best locations to finish their daily gathering quests in Guild Wars 2.
+                Created in HTML, CSS, Javascript (including JQuery and Knockout), with help of Materialize and the official Guild Wars 2 API.
+              </p>
+            </div>
+          </article>
         </div>
       
         <button class="show_more-btn" onClick="toggle('#projects_toggle-content', '#projects-section')"  aria-expanded="false">Show <span>more</span></button>
@@ -196,9 +203,6 @@
           <h5>Reach me @</h5>
           <a href="https://www.linkedin.com/in/helenejuterud/" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
-          </a>
-          <a href="mailto:contact@helenekassandra.com?subject=Contact">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg>
           </a>
         </div>
       </footer>
