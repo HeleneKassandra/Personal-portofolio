@@ -62,10 +62,7 @@ body{
   margin-right: 1rem;
 }
 
-#projects-section {
-  margin: 4rem auto 3rem auto;
-}
-#writing-section {
+#writing-section, #projects-section, #education-section {
   margin: 4rem auto 3rem auto;
 }
 
